@@ -1,4 +1,6 @@
 # IR_Remote-STM32📟
+![IR_Remote](https://github.com/user-attachments/assets/7d5bc353-c8c0-4230-adcb-b4e70cbc0844)
+
 STM32F401 reads NEC IR signals, decodes them, and shows the button name on a 1.8" TFT display. Perfect for learning timers, SPI, and interrupts.
 
 ## Description
