@@ -8,8 +8,11 @@ A universal IR remote receiver and decoder. Using a KY-022 module, the STM32 cap
 
 ## Hardware
 STM32F401RCT6
+
 KY‑022 IR receiver module
+
 1.8" TFT display (ST7735, SPI)
+
 LED on PC13 for blink indication
 
 ## Schematic ❗
