@@ -23,6 +23,6 @@ LED on PC13 for blink indication
 5. Main loop calls DisplayButton() and shows the button name on the TFT.
 
 https://github.com/user-attachments/assets/c8a0cded-8d6a-4405-ba46-1629f918ec19
-
+                                                                            🔇
 ## Author
 👾**SergeyKisa228**👾
