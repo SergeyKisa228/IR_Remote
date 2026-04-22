@@ -1,4 +1,3 @@
-/* vim: set ai et ts=4 sw=4: */
 #ifndef __ST7735_H__
 #define __ST7735_H__
 
@@ -13,7 +12,6 @@
 #define ST7735_MADCTL_BGR 0x08
 #define ST7735_MADCTL_MH  0x04
 
-/*** Redefine if necessary ***/
 #define ST7735_SPI_PORT hspi1
 extern SPI_HandleTypeDef ST7735_SPI_PORT;
 
@@ -24,155 +22,12 @@ extern SPI_HandleTypeDef ST7735_SPI_PORT;
 #define ST7735_DC_Pin        GPIO_PIN_2
 #define ST7735_DC_GPIO_Port  GPIOA
 
-// AliExpress/eBay 1.8" display, default orientation
-
 #define ST7735_IS_160X128 1
 #define ST7735_WIDTH  128
 #define ST7735_HEIGHT 160
 #define ST7735_XSTART 0
 #define ST7735_YSTART 0
 #define ST7735_ROTATION (ST7735_MADCTL_MX | ST7735_MADCTL_MY)
-
-
-// AliExpress/eBay 1.8" display, rotate right
-/*
-#define ST7735_IS_160X128 1
-#define ST7735_WIDTH  160
-#define ST7735_HEIGHT 128
-#define ST7735_XSTART 0
-#define ST7735_YSTART 0
-#define ST7735_ROTATION (ST7735_MADCTL_MY | ST7735_MADCTL_MV)
-*/
-
-// AliExpress/eBay 1.8" display, rotate left
-/*
-#define ST7735_IS_160X128 1
-#define ST7735_WIDTH  160
-#define ST7735_HEIGHT 128
-#define ST7735_XSTART 0
-#define ST7735_YSTART 0
-#define ST7735_ROTATION (ST7735_MADCTL_MX | ST7735_MADCTL_MV)
-*/
-
-// AliExpress/eBay 1.8" display, upside down
-/*
-#define ST7735_IS_160X128 1
-#define ST7735_WIDTH  128
-#define ST7735_HEIGHT 160
-#define ST7735_XSTART 0
-#define ST7735_YSTART 0
-#define ST7735_ROTATION (0)
-*/
-
-// WaveShare ST7735S-based 1.8" display, default orientation
-/*
-#define ST7735_IS_160X128 1
-#define ST7735_WIDTH  128
-#define ST7735_HEIGHT 160
-#define ST7735_XSTART 2
-#define ST7735_YSTART 1
-#define ST7735_ROTATION (ST7735_MADCTL_MX | ST7735_MADCTL_MY | ST7735_MADCTL_RGB)
-*/
-
-// WaveShare ST7735S-based 1.8" display, rotate right
-/*
-#define ST7735_IS_160X128 1
-#define ST7735_WIDTH  160
-#define ST7735_HEIGHT 128
-#define ST7735_XSTART 1
-#define ST7735_YSTART 2
-#define ST7735_ROTATION (ST7735_MADCTL_MY | ST7735_MADCTL_MV | ST7735_MADCTL_RGB)
-*/
-
-// WaveShare ST7735S-based 1.8" display, rotate left
-/*
-#define ST7735_IS_160X128 1
-#define ST7735_WIDTH  160
-#define ST7735_HEIGHT 128
-#define ST7735_XSTART 1
-#define ST7735_YSTART 2
-#define ST7735_ROTATION (ST7735_MADCTL_MX | ST7735_MADCTL_MV | ST7735_MADCTL_RGB)
-*/
-
-// WaveShare ST7735S-based 1.8" display, upside down
-/*
-#define ST7735_IS_160X128 1
-#define ST7735_WIDTH  128
-#define ST7735_HEIGHT 160
-#define ST7735_XSTART 2
-#define ST7735_YSTART 1
-#define ST7735_ROTATION (ST7735_MADCTL_RGB)
-*/
-
-// 1.44" display, default orientation
-//#define ST7735_IS_128X128 1
-//#define ST7735_WIDTH  128
-//#define ST7735_HEIGHT 128
-//#define ST7735_XSTART 2
-//#define ST7735_YSTART 3
-//#define ST7735_ROTATION (ST7735_MADCTL_MX | ST7735_MADCTL_MY | ST7735_MADCTL_BGR)
-
-// 1.44" display, rotate right
-/*
-#define ST7735_IS_128X128 1
-#define ST7735_WIDTH  128
-#define ST7735_HEIGHT 128
-#define ST7735_XSTART 3
-#define ST7735_YSTART 2
-#define ST7735_ROTATION (ST7735_MADCTL_MY | ST7735_MADCTL_MV | ST7735_MADCTL_BGR)
-*/
-
-// 1.44" display, rotate left
-/*
-#define ST7735_IS_128X128 1
-#define ST7735_WIDTH  128
-#define ST7735_HEIGHT 128
-#define ST7735_XSTART 1
-#define ST7735_YSTART 2
-#define ST7735_ROTATION (ST7735_MADCTL_MX | ST7735_MADCTL_MV | ST7735_MADCTL_BGR)
-*/
-
-// 1.44" display, upside down
-/*
-#define ST7735_IS_128X128 1
-#define ST7735_WIDTH  128
-#define ST7735_HEIGHT 128
-#define ST7735_XSTART 2
-#define ST7735_YSTART 1
-#define ST7735_ROTATION (ST7735_MADCTL_BGR)
-*/
-
-// mini 160x80 display (it's unlikely you want the default orientation)
-/*
-#define ST7735_IS_160X80 1
-#define ST7735_XSTART 26
-#define ST7735_YSTART 1
-#define ST7735_WIDTH  80
-#define ST7735_HEIGHT 160 
-#define ST7735_ROTATION (ST7735_MADCTL_MX | ST7735_MADCTL_MY | ST7735_MADCTL_BGR)
-*/
-
-// mini 160x80, rotate left
-/*
-#define ST7735_IS_160X80 1
-#define ST7735_XSTART 1
-#define ST7735_YSTART 26
-#define ST7735_WIDTH  160
-#define ST7735_HEIGHT 80
-#define ST7735_ROTATION (ST7735_MADCTL_MX | ST7735_MADCTL_MV | ST7735_MADCTL_BGR)
-*/
-
-// mini 160x80, rotate right 
-/*
-#define ST7735_IS_160X80 1
-#define ST7735_XSTART 1
-#define ST7735_YSTART 26
-#define ST7735_WIDTH  160
-#define ST7735_HEIGHT 80
-#define ST7735_ROTATION (ST7735_MADCTL_MY | ST7735_MADCTL_MV | ST7735_MADCTL_BGR)
-*/
-
-/****************************/
 
 #define ST7735_NOP     0x00
 #define ST7735_SWRESET 0x01
@@ -221,7 +76,6 @@ extern SPI_HandleTypeDef ST7735_SPI_PORT;
 #define ST7735_GMCTRP1 0xE0
 #define ST7735_GMCTRN1 0xE1
 
-// Color definitions
 #define	ST7735_BLACK   0x0000
 #define	ST7735_BLUE    0x001F
 #define	ST7735_RED     0xF800
@@ -243,7 +97,6 @@ typedef enum {
 extern "C" {
 #endif
 
-// call before initializing any SPI devices
 void ST7735_Unselect();
 
 void ST7735_Init(void);
@@ -261,4 +114,4 @@ void ST7735_SetGamma(GammaDef gamma);
 }
 #endif
 
-#endif // __ST7735_H__
+#endif 
